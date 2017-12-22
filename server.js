@@ -51,22 +51,26 @@ const routes = {
 //load and save database functions
 // function loadDatabase() {
 //   try {
-//     if (fs.exists('savedDatabase.yml')) {
-//       return yaml.safeLoad(fs.readFileSync('savedDatabase.yml', 'utf8'));
-//     }
+//       if (fs.exists 'dataBase.yml') {
+//         console.log('loadDatabase funcion call');
+//         return yaml.safeLoad(fs.readFileSync('dataBase.yml', 'utf8'));
+//       } else {
+//         return null;
+//       }
 //   } catch (e) {
-//     console.log(e);
+//       console.log(e);
 //   }
 //   return false;
 // }
-//
-// function savedDatabase() {
+// //Think is throwing a bad POST error
+// function saveDatabase() {
 //   try {
-//     fs.writeFileSynce('savedDatabase.yml', yaml.safeDump(database), 'utf8');
+//     fs.writeFileSync('dataBase.yml', yaml.safeDump(database), 'utf8');
+//     console.log('saved?');
 //   } catch (e) {
 //     console.log(e);
 //   }
-// }
+//}
 
 function createComment(url, request) {
   const requestComment = request.body && request.body.comment;
@@ -118,7 +122,7 @@ function updateComment(url, request) {
 
   return response;
 }
-//NEED TO FIX, CURRENTLY DOESN'T DELETE COMMENT AS EXPECTED
+
 function deleteComment(url, request) {
   const id = Number(url.split('/').filter(segment => segment)[1]);
   const savedComment = database.comments[id];
