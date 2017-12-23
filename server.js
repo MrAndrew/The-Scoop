@@ -1,6 +1,8 @@
 // js-yaml library for save/load of database when server starts/stops
 // const yaml = require('js-yaml');
 // const fs = require('fs');
+//CURRENTLY COMMENTED OUT BECAUSE YAML FUNCTIONS DON'T WORK
+//AS INTENDED
 
 // database is let instead of const to allow us to modify it in test.js
 let database = {
@@ -47,7 +49,8 @@ const routes = {
     'PUT': downvoteComment
   }
 };
-
+//CURRENTLY COMMENTED OUT BECAUSE NOT WORKING AND CAN'T FIGURE OUT A CLEAR WAY
+//TO FIX THE PROBLEM OF YAML INTEGRATION
 //load and save database functions
 // function loadDatabase() {
 //   try {
@@ -72,6 +75,7 @@ const routes = {
 //   }
 //}
 
+//start comment functions that sould be called from the routes 
 function createComment(url, request) {
   const requestComment = request.body && request.body.comment;
   const response = {};
