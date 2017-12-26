@@ -2,7 +2,8 @@
 // const yaml = require('js-yaml');
 // const fs = require('fs');
 //CURRENTLY COMMENTED OUT BECAUSE YAML FUNCTIONS DON'T WORK
-//AS INTENDED
+//AS INTENDED PROBABLY DUE TO FSEVENTS REQUIRING A 'DARWIN' OS, SHOULD WORK ON THAT 
+//TYPE OF SYSTEM, IN THEORY
 
 // database is let instead of const to allow us to modify it in test.js
 let database = {
