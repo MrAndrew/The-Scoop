@@ -1,14 +1,6 @@
 // js-yaml library for save/load of database when server starts/stops
-<<<<<<< HEAD
  const yaml = require('js-yaml');
  const fs = require('fs');
-=======
-// const yaml = require('js-yaml');
-// const fs = require('fs');
-//CURRENTLY COMMENTED OUT BECAUSE YAML FUNCTIONS DON'T WORK
-//AS INTENDED PROBABLY DUE TO FSEVENTS REQUIRING A 'DARWIN' OS, SHOULD WORK ON THAT 
-//TYPE OF SYSTEM, IN THEORY
->>>>>>> 818c3dd8cb88e101073e3c83de1df0210a49fd00
 
 // database is let instead of const to allow us to modify it in test.js
 let database = {
