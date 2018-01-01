@@ -1,0 +1,31 @@
+users:
+  Andrew:
+    username: Andrew
+    articleIds:
+      - 1
+    commentIds:
+      - 1
+articles:
+  '1':
+    id: 1
+    title: Stuff
+    url: 'https://www.stuff.co.nz'
+    username: Andrew
+    commentIds:
+      - 1
+    upvotedBy:
+      - Andrew
+    downvotedBy: []
+    comments: []
+nextArticleId: 2
+comments:
+  '1':
+    id: 1
+    body: STUFF!!!!!
+    articleId: 1
+    username: Andrew
+    commentIds: []
+    upvotedBy: []
+    downvotedBy:
+      - Andrew
+nextCommentId: 2
