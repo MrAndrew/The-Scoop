@@ -15,6 +15,11 @@ The Scoop allows users to:
 The starting code of The Scoop contained all of the server logic for **users** and **articles**, but did not have the necessary database and route logic for **comments**.
 
 - `database` is a JavaScript object containing all of the stored model instances. The `users` and `articles` properties contain JavaScript objects which will contain all of your created users and articles. Each of these objects will have keys representing the ID of the saved resource and values of the whole resource. For example if we created an article with ID `1`, the `articles` object would look like this `{1: {id: 1, url: 'article url', ...}}`. Additionally the `database` object contains a property for keeping track of the ID of the next article to create (to ensure no two articles have the same ID)
+
+The starting code of The Scoop contained all of the server logic for **users** and **articles**, but did not have the necessary database and route logic for **comments**.
+
+- `database` is a JavaScript object containing all of the stored model instances. The `users` and `articles` properties contain JavaScript objects which will contain all of your created users and articles. Each of these objects will have keys representing the ID of the saved resource and values of the whole resource. For example if we created an article with ID `1`, the `articles` object would look like this `{1: {id: 1, url: 'article url', ...}}`. Additionally the `database` object contains a property for keeping track of the ID of the next article to create (to ensure no two articles have the same ID)
+
 - `routes` is a JavaScript object containing all of the route's needed for The Scoop. The keys of this object are the path of the request, and the values are objects containing all of the possible HTTP verbs for that path. Each of those verbs map to a function to call if that route is hit and will be passed the path of the request and the request object (containing the request body)
 
 ## How To Begin
@@ -28,6 +33,7 @@ To view your local version of the site, open **index.html** in Google Chrome.
 ## Implementation Details
 
 To complete this project, I needed to add the database information and server routes for Comments. Below is listed the high-level information about the Comment data model and the expected functionality of each Comment route. Additional implementation information, such as edge cases, can be discovered by running the test suite. (This can be achieved by running `npm test` from the command line once you have the local server running in another CL.)
+
 
 ### Database Properties
 
@@ -73,6 +79,7 @@ To complete this project, I needed to add the database information and server ro
   - Adds supplied username to `downvotedBy` of corresponding comment if user hasn't already downvoted the comment, remove username from `upvotedBy` if that user had previously upvoted the comment, returns 200 response with comment on `comment` property of response body
   - If no ID is supplied, comment with supplied ID doesn't exist, or user with supplied username doesn't exist, returns 400 response
 
+
 ### YAML Saving and Loading
 
 I was tasked with implementing a way to save the database information so that it was not lost when closing the server because the provided code didn't include this functionality originally.
@@ -94,4 +101,5 @@ edge cases.
 
 To run these tests, first, open the root project directory in your terminal. Then run `npm install` to install
 all necessary testing dependencies (if you haven't already).
+
 Finally, run `npm test`. You will see a list of tests that ran and all should pass currently.
