@@ -5,6 +5,12 @@ users:
       - 1
     commentIds:
       - 1
+  b:
+    username: b
+    articleIds:
+      - 2
+    commentIds:
+      - 2
 articles:
   '1':
     id: 1
@@ -13,19 +19,40 @@ articles:
     username: Andrew
     commentIds:
       - 1
+      - 2
     upvotedBy:
       - Andrew
     downvotedBy: []
-    comments: []
-nextArticleId: 2
-comments:
-  '1':
-    id: 1
-    body: STUFF!!!!!
-    articleId: 1
-    username: Andrew
+    comments:
+      - &ref_0
+        id: 1
+        body: STUFF!!!!!
+        articleId: 1
+        username: Andrew
+        commentIds: []
+        upvotedBy:
+          - b
+        downvotedBy:
+          - Andrew
+  '2':
+    id: 2
+    title: obn;ofan
+    url: befa
+    username: b
     commentIds: []
     upvotedBy: []
     downvotedBy:
-      - Andrew
-nextCommentId: 2
+      - b
+nextArticleId: 3
+comments:
+  '1': *ref_0
+  '2':
+    id: 2
+    body: gn rs
+    articleId: 1
+    username: b
+    commentIds: []
+    upvotedBy: []
+    downvotedBy:
+      - b
+nextCommentId: 3
