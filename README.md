@@ -16,7 +16,6 @@ The Scoop allows users to:
 - Upvote and downvote comments
 - View all of a user's articles and comments
 
-<<<<<<< HEAD
 The starting code of The Scoop contained all of the server logic for **users** and **articles**, but did not have the necessary database and route logic for **comments**.
 
 - `database` is a JavaScript object containing all of the stored model instances. The `users` and `articles` properties contain JavaScript objects which will contain all of your created users and articles. Each of these objects will have keys representing the ID of the saved resource and values of the whole resource. For example if we created an article with ID `1`, the `articles` object would look like this `{1: {id: 1, url: 'article url', ...}}`. Additionally the `database` object contains a property for keeping track of the ID of the next article to create (to ensure no two articles have the same ID)
@@ -26,8 +25,6 @@ The starting code of The Scoop contained all of the server logic for **users** a
 - `database` is a JavaScript object containing all of the stored model instances. The `users` and `articles` properties contain JavaScript objects which will contain all of your created users and articles. Each of these objects will have keys representing the ID of the saved resource and values of the whole resource. For example if we created an article with ID `1`, the `articles` object would look like this `{1: {id: 1, url: 'article url', ...}}`. Additionally the `database` object contains a property for keeping track of the ID of the next article to create (to ensure no two articles have the same ID)
 
 - `routes` is a JavaScript object containing all of the route's needed for The Scoop. The keys of this object are the path of the request, and the values are objects containing all of the possible HTTP verbs for that path. Each of those verbs map to a function to call if that route is hit and will be passed the path of the request and the request object (containing the request body)
-
-It is important to take time at the beginning of this project reading through the previously written database and route logic to ensure you understand how all of these pieces work together.
 
 ## How To Begin
 
@@ -52,7 +49,6 @@ To complete this project, I needed to add the database information and server ro
   - downvotedBy - Array of usernames, corresponding to users who downvoted the comment
 
 * **nextCommentId** - a number representing the ID of the next comment to create (to ensure all comments have unique IDs), initializes to `1`
-
 
 ### Route Paths and Functionality
 
