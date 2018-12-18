@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-In this project, my responsibility was to build all of the routing and database logic for an article submission web app called The Scoop.
+In this project, you will build all of the routing and database logic for an article submission web app called The Scoop.
 
 The Scoop allows users to:
 - Create and log in to custom username handles
@@ -12,6 +12,7 @@ The Scoop allows users to:
 - Upvote and downvote comments
 - View all of a user's articles and comments
 
+<<<<<<< HEAD
 The starting code of The Scoop contained all of the server logic for **users** and **articles**, but did not have the necessary database and route logic for **comments**.
 
 - `database` is a JavaScript object containing all of the stored model instances. The `users` and `articles` properties contain JavaScript objects which will contain all of your created users and articles. Each of these objects will have keys representing the ID of the saved resource and values of the whole resource. For example if we created an article with ID `1`, the `articles` object would look like this `{1: {id: 1, url: 'article url', ...}}`. Additionally the `database` object contains a property for keeping track of the ID of the next article to create (to ensure no two articles have the same ID)
@@ -19,12 +20,23 @@ The starting code of The Scoop contained all of the server logic for **users** a
 The starting code of The Scoop contained all of the server logic for **users** and **articles**, but did not have the necessary database and route logic for **comments**.
 
 - `database` is a JavaScript object containing all of the stored model instances. The `users` and `articles` properties contain JavaScript objects which will contain all of your created users and articles. Each of these objects will have keys representing the ID of the saved resource and values of the whole resource. For example if we created an article with ID `1`, the `articles` object would look like this `{1: {id: 1, url: 'article url', ...}}`. Additionally the `database` object contains a property for keeping track of the ID of the next article to create (to ensure no two articles have the same ID)
+=======
+You can view all of this functionality in action in the video below:
+
+The current implementation of The Scoop contains all of the server logic for users and articles, but does not have the necessary database and route logic for comments. You can see all of the current server logic in **server.js**. The two main objects to pay attention to are `database` and `routes`.
+>>>>>>> parent of 3d66fc9... Update README.md
 
 - `routes` is a JavaScript object containing all of the route's needed for The Scoop. The keys of this object are the path of the request, and the values are objects containing all of the possible HTTP verbs for that path. Each of those verbs map to a function to call if that route is hit and will be passed the path of the request and the request object (containing the request body)
 
+It is important to take time at the beginning of this project reading through the previously written database and route logic to ensure you understand how all of these pieces work together.
+
 ## How To Begin
 
+<<<<<<< HEAD
 To start, download the code for this project. It requires a bash terminal program.
+=======
+To start, download the starting code for this project <a href="https://s3.amazonaws.com/codecademy-content/programs/build-apis/projects/project-3-the-scoop.zip" target="_blank">here</a>. After downloading the zip folder, double click it to uncompress it and access the contents of this project.
+>>>>>>> parent of 3d66fc9... Update README.md
 
 To start your server, run `npm install` and then `node server.js` from the root directory of this project. Every time you change **server.js**, you will have to restart your server before the changes will take effect. To do this press "control + c" in the bash terminal where your server is running (or close the terminal) to shut it down and then re-run `node server.js` to start it again. While your server is running, you will not be able to run commands in the bash terminal, so open a new terminal if you want to run other commands.
 
@@ -32,8 +44,12 @@ To view your local version of the site, open **index.html** in Google Chrome.
 
 ## Implementation Details
 
+<<<<<<< HEAD
 To complete this project, I needed to add the database information and server routes for Comments. Below is listed the high-level information about the Comment data model and the expected functionality of each Comment route. Additional implementation information, such as edge cases, can be discovered by running the test suite. (This can be achieved by running `npm test` from the command line once you have the local server running in another CL.)
 
+=======
+To complete this project, you will need to add the database information and server routes for Comments. Below we will list the high-level information about the Comment data model and the expected functionality of each Comment route. Additional implementation information, such as edge cases, can be discovered by running the test suite (discussed later).
+>>>>>>> parent of 3d66fc9... Update README.md
 
 ### Database Properties
 
@@ -80,11 +96,15 @@ To complete this project, I needed to add the database information and server ro
   - If no ID is supplied, comment with supplied ID doesn't exist, or user with supplied username doesn't exist, returns 400 response
 
 
+<<<<<<< HEAD
 ### YAML Saving and Loading
 
 I was tasked with implementing a way to save the database information so that it was not lost when closing the server because the provided code didn't include this functionality originally.
 
 I had to write two functions, one that saves the database object to YAML after each server call, and another that loads the database object when the server starts. The implemented logic for calling these functions was present, it was my task to find the appropriate JavaScript modules for this functionality and writing the following functions:
+=======
+Currently every time you start and stop your server, your database object will get erased as it isn't being saved anywhere. There are many potential formats for saving the database object to ensure it is able to be restored. For this project, as a bonus, we encourage you to use YAML. You will write two functions, one that saves your database object to YAML after each server call, and another that loads the database object when the server starts. We have implemented the logic for calling these functions, it is your task to find appropriate JavaScript modules for this functionality and writing the following functions:
+>>>>>>> parent of 3d66fc9... Update README.md
 
 **loadDatabase**
 
@@ -96,10 +116,21 @@ I had to write two functions, one that saves the database object to YAML after e
 
 ## Testing
 
-A testing suite was provided in the starter code, checking for all essential functionality and
+A testing suite has been provided for you, checking for all essential functionality and
 edge cases.
 
 To run these tests, first, open the root project directory in your terminal. Then run `npm install` to install
 all necessary testing dependencies (if you haven't already).
+<<<<<<< HEAD
 
 Finally, run `npm test`. You will see a list of tests that ran and all should pass currently.
+=======
+Finally, run `npm test`. You will see a list of tests that ran with information
+about whether or not each test passed. After this list, you will see more specific output
+about why each failing test failed.
+
+As you implement functionality, run the tests to
+ensure you are creating correctly named variables and functions that return the proper values.
+The tests will additionally help you identify edge cases that you may not have anticipated
+when first writing the functions.
+>>>>>>> parent of 3d66fc9... Update README.md
